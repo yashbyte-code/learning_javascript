@@ -29,3 +29,14 @@ const obj1 = {
 // to retrive data from this type of object we use [] not . and there is no need to write number in " " simply write in []
 console.log(obj1[0]);
 console.log(obj1[1]);
+
+
+// now we are moving towards second method to create object 
+const obj2 = new Object()
+
+// inserting values in it 
+obj2.name = "Yash Don";
+obj2.age = 19;
+obj2.college = "JSPM BSIOTR ";
+
+console.log(obj2);
