@@ -40,3 +40,16 @@ obj2.age = 19;
 obj2.college = "JSPM BSIOTR ";
 
 console.log(obj2);
+
+
+// method - 3 of creating object is based on class (object oriented programming )
+class people{
+    constructor(name,age, college){
+        this.name = name;
+        this.age = age;
+        this.college = college;
+    }
+}
+
+let student1 = new people("Yash", 19, "Information Technology");
+console.log(student1);
