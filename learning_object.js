@@ -53,3 +53,53 @@ class people{
 
 let student1 = new people("Yash", 19, "Information Technology");
 console.log(student1);
+
+
+// there are some functions in javascript related to object like keys(),assign(),
+
+// 1)keys() : returns keys present in object
+const student = {
+    name: "Yash",
+    age: 19,
+    branch: "IT"
+};
+
+let keys = Object.keys(student);
+
+console.log(keys);
+
+
+
+// 2)values() : returns values in object
+const student1 = {
+    name: "Yash",
+    age: 19,
+    branch: "IT"
+};
+
+console.log(Object.values(student));
+
+
+// 3)entries() : returns object as in form of array 
+const student3 = {
+    name: "Yash",
+    age: 19
+};
+
+console.log(Object.entries(student));
+
+
+
+// 4)assign() : it mergs two objects 
+const student4 = {
+    name: "Yash"
+};
+
+const details = {
+    age: 19,
+    branch: "IT"
+};
+
+Object.assign(student4, details);
+
+console.log(student);
