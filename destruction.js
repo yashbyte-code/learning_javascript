@@ -30,5 +30,5 @@ console.log(obj1.Address.dist);
 
 // destruction on nested object
 
-const {Address:{pincode:city_code}} = obj1;
+const {Address:{pincode:city_code}} = obj1; //here i use : after pincode because store its value in city_code variable
 console.log(city_code);
