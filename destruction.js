@@ -39,3 +39,25 @@ const arr = [10, 20, 30, 40, 50];
 
 const [first, second] = arr;
 console.log(first, second);
+
+
+// in object and array there is prototype chaining 
+// prortotype chaing is like inheritance 
+
+obj3 = {
+    name : "Don",
+    Address : "Wagholi pune",
+    branch : "IT",
+}
+
+obj4 = {
+    email : "yashsabale5550@gamil.com",
+    fees : 56252,
+    college : "JSPM BSIOTR",
+}
+
+// i want to use properties of obj3 then i use prototype chaining 
+
+obj4.__proto__ = obj3;
+
+console.log(name);
