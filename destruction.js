@@ -10,3 +10,25 @@ const obj = {
 // for destruction syntax is like const {value1, value2, ...} = object_name
 const {name, Age} = obj;
 console.log(name, Age);
+
+// nested object 
+// nested object is an object in object 
+
+const obj1 = {
+    name : "Yash",
+    Age : 19,
+    Address : {
+        pincode : 413203,
+        tal : "Karmala",
+        dist : "Solapur",
+    },
+    College : "JSPM BSIOTR",
+
+}
+
+console.log(obj1.Address.dist);
+
+// destruction on nested object
+
+const {Address:{pincode:city_code}} = obj1;
+console.log(city_code);
