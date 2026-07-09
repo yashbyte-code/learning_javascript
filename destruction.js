@@ -32,3 +32,10 @@ console.log(obj1.Address.dist);
 
 const {Address:{pincode:city_code}} = obj1; //here i use : after pincode because store its value in city_code variable
 console.log(city_code);
+
+// similarly we can perform destruction on Array
+
+const arr = [10, 20, 30, 40, 50];
+
+const [first, second] = arr;
+console.log(first, second);
