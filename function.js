@@ -26,3 +26,18 @@ console.log(cube(8));
 const cube1 = number => number*number*number;
 console.log(cube1(18));
 
+// we can pass object to a function 
+
+function details(objects) {
+    console.log("name of student is :" , objects.name);
+    console.log("Birthdate of student is :" , objects.DOB);
+}
+
+const obj1 = {
+    name : "Yash",
+    DOB : "10-03-2007",
+    age : 19,
+    branch : "IT"
+}
+
+details(obj1);
