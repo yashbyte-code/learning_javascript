@@ -41,3 +41,26 @@ const obj1 = {
 }
 
 details(obj1);
+
+// we can do destruction of an object in function to reduce complexity 
+const obj2 = {
+    name : "Yash",
+    DOB : "10-03-2007",
+    age : 19,
+    branch : "IT",
+    address:{
+        pincode : 413203,
+        city : "Karmala",
+        society : "Muttha Nagar"
+    }
+}
+
+function details_stu({name,DOB, address:{city}}) {
+    console.log("name of student is :" , name);
+    console.log("Birthdate of student is :" , DOB);
+    console.log("student live in city is : ", city)
+}
+
+
+details_stu(obj2);
+
