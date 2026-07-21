@@ -9,3 +9,14 @@ const sum = numbers.reduce((accumulator, currentValue) => {
 }, 0);
 
 console.log(sum);
+
+
+// it takes call back function and then initializer in it we can give any thing like object, array, etc.
+const number1 = [10, 20, 30, 40, 50]
+
+const obj1 = number1.reduce((acc, value, index)=>{
+    acc[index] = value
+    return acc;
+}, {});
+
+console.log(obj1);
