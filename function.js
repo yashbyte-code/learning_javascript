@@ -64,3 +64,4 @@ function details_stu({name,DOB, address:{city}}) {
 
 details_stu(obj2);
 
+
