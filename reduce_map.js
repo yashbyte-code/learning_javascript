@@ -20,3 +20,19 @@ const obj1 = number1.reduce((acc, value, index)=>{
 }, {});
 
 console.log(obj1);
+
+// in reduce it's call back function takes three values first is accumulater , second is value and last is index 
+
+const obj2 = {
+    name: "Yash",
+    Age: 19,
+    address: "Karmala"
+};
+
+const obj_val = Object.entries(obj2).reduce((acc, [key, value]) => {
+  acc[key] = value;
+  return acc;
+}, {});
+
+console.log(obj_val);
+// { name: 'Yash', Age: 19, address: 'Karmala' }
