@@ -36,3 +36,5 @@ const obj_val = Object.entries(obj2).reduce((acc, [key, value]) => {
 
 console.log(obj_val);
 // { name: 'Yash', Age: 19, address: 'Karmala' }
+
+

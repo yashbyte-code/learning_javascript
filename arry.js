@@ -11,3 +11,5 @@ console.log(newarr)
 console.log(arr.splice(1,5))
 console.log(arr.splice(1,4,true))
 console.log(arr)
+
+console.log("tera hero idhar hai ...")

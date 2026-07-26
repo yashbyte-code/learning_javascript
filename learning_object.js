@@ -103,3 +103,4 @@ const details = {
 Object.assign(student4, details);
 
 console.log(student);
+
