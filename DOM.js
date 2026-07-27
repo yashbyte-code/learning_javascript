@@ -33,3 +33,23 @@ forEach((val)=>{
 // accessing element by tag  name 
 const value = document.getElementsByTagName('h1');
 // suppos ein my html multiple elements are having same tag name so it will returns all values in form of htmlcollection 
+// i can iterate on HTMLlist
+
+const list = document.getElementsByTagName('li');
+// in out html code there are 4 <li> tags and i can iterate on it using for loop , forEach loop 
+
+
+for(let i = 0; i < team.length; i++)
+{
+    console.log(team[i]);  // this is normal for loop 
+}
+
+// forEach loop 
+team.forEach((val)=>{
+    console.log(val);
+})
+
+// forof loop
+for(val of team){
+    console.log(val);
+}
