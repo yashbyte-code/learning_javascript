@@ -92,3 +92,58 @@ const parent1 = document.getElementById('list1');
 parent1.append(element2, element3, element4);
 
 
+// if i want to add only text mode then there is different method because it not contain any tag
+const text = document.createTextNode("hello Everyon, Yash is Here...");
+const parent5 = document.getElementById('container');
+parent5.append(text);
+
+
+// adding attribute node 
+const attribute = document.createAttribute('class');
+// inserting value of id by using .value function 
+attribute.value = "unordered_list";
+
+// now we need access of an element to add attribute for that we use query selector function
+const curr_attribute = document.querySelector('ul');
+
+// now we give access , its time to insert vallue in it 
+curr_attribute.setAttributeNode(attribute);
+
+
+// now similarly giving attribute to first element to unordered list 
+const attribute1 = document.createAttribute('id');
+attribute1.value = "first_list";
+
+const curr_attri = document.querySelector('li');
+curr_attri.setAttributeNode(attribute1);
+
+
+// suppose i have list like 
+//  <ul id="list1">
+//             <li>HTML</li>
+//             <li>CSS</li>
+//             <li>Networking</li>
+//             <li>Javascript</li>
+//   </ul>
+
+// and i want to access 2nd "li" from "ul list "
+// then i firstly access its parent element then it gives html collection
+// and then we can access it same as accessing element from array 
+
+const attribute2 = document.createAttribute('id');
+attribute2.value = "li_2";
+
+const parent_list = document.getElementById('list1');
+
+// ❌ parent_list[1] was wrong → because parent_list is single element
+// ✅ we use children to get HTMLCollection
+parent_list.children[1].setAttributeNode(attribute2);
+
+
+// supppose i want to get attribute of any element then 
+// first i access the element by its existing any one attribute like class name or id name
+
+const get_element = document.getElementById("list1");
+
+// here i give two values it creates custom named attribute and its value is list_of_topic
+get_element.setAttribute("custom", "list_of_topic");
