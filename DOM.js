@@ -10,6 +10,7 @@
 // let head2 = document.querySelector('#second_head')
 // head2.innerHTML ="Aap Padh Chuke Ho..."
 
+<<<<<<< HEAD
 // head2.style.backgroundColor = "pink"
 
 // // to iterate on node list then we can use for loop, forEach loop, for of loop 
@@ -54,12 +55,14 @@
 //     console.log(val);
 // }
 
+
 // creating element using java-script 
 const element = document.createElement('li');
 element.innerHTML = "typescript";
 
 // to add this element we need to get access of its parent using id or class
 const parent = document.getElementById('list1');
+
 parent.appendChild(element);
 
 // creating function yo add element in html 
@@ -74,3 +77,5 @@ function addElement(element_type,id, content)
 
 addElement('li', 'list1', "github" );
 addElement('li', 'list1', "React");
+
+
