@@ -22,7 +22,7 @@ const node_list = document.querySelectorAll('.header_1');
 
 
 //  forEach loop
-forEach((val)=>{
+node_list.forEach((val)=>{
     console.log(val);
 }
 
@@ -39,9 +39,9 @@ const list = document.getElementsByTagName('li');
 // in out html code there are 4 <li> tags and i can iterate on it using for loop , forEach loop 
 
 
-for(let i = 0; i < team.length; i++)
+for(let i = 0; i < list.length; i++)
 {
-    console.log(team[i]);  // this is normal for loop 
+    console.log(list[i]);  // this is normal for loop 
 }
 
 // forEach loop 
@@ -53,3 +53,11 @@ team.forEach((val)=>{
 for(val of team){
     console.log(val);
 }
+
+// creating element using java-script 
+const element = document.createElement('li');
+element.innerHTML = "typescript";
+
+// to add this element we need to get access of its parent using id or class
+const parent = document.getElementById('list1');
+parent.appendChild(element);
