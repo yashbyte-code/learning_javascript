@@ -10,7 +10,6 @@
 // let head2 = document.querySelector('#second_head')
 // head2.innerHTML ="Aap Padh Chuke Ho..."
 
-<<<<<<< HEAD
 // head2.style.backgroundColor = "pink"
 
 // // to iterate on node list then we can use for loop, forEach loop, for of loop 
@@ -77,5 +76,19 @@ function addElement(element_type,id, content)
 
 addElement('li', 'list1', "github" );
 addElement('li', 'list1', "React");
+
+
+// by using append insted of appendChild we can add multiple elements 
+const element2 = document.createElement('li');
+element2.innerHTML = "blockchain";
+
+const element3 = document.createElement('li');
+element3.innerHTML = "LLD";
+
+const element4 = document.createElement('li');
+element4.innerHTML = "HLD";
+
+const parent1 = document.getElementById('list1');
+parent1.append(element2, element3, element4);
 
 
