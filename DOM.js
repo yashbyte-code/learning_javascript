@@ -147,3 +147,16 @@ const get_element = document.getElementById("list1");
 
 // here i give two values it creates custom named attribute and its value is list_of_topic
 get_element.setAttribute("custom", "list_of_topic");
+
+// similarly we can remove attribute 
+get_element.removeAttribute("custom");
+
+
+// add nodes to dom 
+// to add anything like node, attribute, element we need to take access of parent element 
+// you want to add element at first not at end like append then we use prepend 
+
+const parent_ele = document.getElementById('list1');
+const element_add = document.createElement('li');
+element_add.innerHTML = 'DEVOPs';
+parent_ele.prepend(element_add);
