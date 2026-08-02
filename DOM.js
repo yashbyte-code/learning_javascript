@@ -177,4 +177,5 @@ parent_ele.prepend(element_add); // this line adds value in dom
 const add_div = document.createElement('div');
 add_div.innerHTML = "kaise ho Yash Bhai...Aur who Kaisi Hai😂😂";
 
-parent_ele.insertAdjacentElement("beforebegin",add_div);
+parent_ele.insertAdjacentElement("beforebegin",add_div); // beforebegin adds element before list start 
+
