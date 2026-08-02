@@ -159,4 +159,22 @@ get_element.removeAttribute("custom");
 const parent_ele = document.getElementById('list1');
 const element_add = document.createElement('li');
 element_add.innerHTML = 'DEVOPs';
-parent_ele.prepend(element_add);
+parent_ele.prepend(element_add); // this line adds value in dom
+
+//  <ul id="list1">
+//             <li>HTML</li>
+//             <li>CSS</li>
+//             <li>Networking</li>
+//             <li>Javascript</li>
+//   </ul>
+// i have this unordered list in html and i want to add div tag before it then 
+// first step is we need to create div tag by using ctreatElement function 
+// then we enter connent in the tag using innerHTML function 
+// then we use insertadjucent element command to add element before out parent element in our example parent element is list1
+// for that it asks 4 things like beforebegin(before element itself), afterbegin(element before its first child), 
+// beforeend(before element itself), afterend(after element itself)
+
+const add_div = document.createElement('div');
+add_div.innerHTML = "kaise ho Yash Bhai...Aur who Kaisi Hai😂😂";
+
+parent_ele.insertAdjacentElement("beforebegin",add_div);
