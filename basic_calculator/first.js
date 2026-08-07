@@ -27,14 +27,15 @@ const colors = [
   "#faebd7",
   "#e6e6fa",
   "#ffe4e1",
-  "#f5f5dc"
+  "#f5f5dc",
+  "pink"
 ];
 
-button.addEventListener('mousemove', ()=>{
+button.addEventListener('mouseover', ()=>{
     const index1 = Math.floor(Math.random() * colors.length);
     document.body.style.backgroundColor = colors[index1];
    
 })
 
-setInterval(changing_bg, 3000);
+setInterval(changing_bg, 2000);
 
