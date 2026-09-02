@@ -108,14 +108,59 @@ function getquestion(){
     const data = new Set(); //we use set here to get unique element
 
     while(data.size != 5){
-        const index = Math.floor(Math.random()*questions.size);
+        const index = Math.floor(Math.random()*questions.length);
         data.add(questions[index]);
     }
+
+
     return [...data]; //we convert set into array using spread operator 
 }
 
+const form = document.querySelector('form');
 
- const div = document.createElement('div');
- div.className = 'question';
+const problem = getquestion();
+problem.forEach((obj, index)=>{  // obj = question: "What does DBMS stand for?", options: ["Database Management System", "Data Backup Management System", "Database Monitoring System", "Data Management Service"], answer: "Database Management System" },
+    // select the form and insert all elements in it
 
- 
+    const div = document.createElement('div');
+    div.className = 'question';
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = `${index + 1}. ${obj.question}`;
+
+    div.appendChild(paragraph);
+
+    //creating 4 options 
+    obj.options.forEach((opt)=>{
+       const label =  document.createElement('label');
+       const input = document.createElement('input');
+       input.type = "radio";
+       input.name = `q${index + 1}`;
+       input.value = opt; //humne yaha par value dedi hai input ki uski innerhtml nahi like <input value = 'sachine'> sachine tendulakar </input> so sirf value di hai sachine tendulakar nahi diya hai 
+
+       // input ko label ko andhar insert kardiya 
+       label.appendChild(input);
+
+       //ab textnode create karte hai 
+       const text_in_label = document.createTextNode(opt);
+
+
+      //usko append kardo label ke sath
+        label.appendChild(text_in_label);
+
+        div.appendChild(label);
+        div.appendChild(document.createElement('br'));
+    });
+
+    form.appendChild(div);
+});
+
+//creating button 
+const button = document.createElement('button')
+button.type = 'submit';
+button.className = "submit_button";
+button.textContent = "Submit";
+
+form.appendChild(button);
+
+
