@@ -118,12 +118,18 @@ function getquestion(){
 
 const form = document.querySelector('form');
 
+// creating answer object , first it is empty 
+    const org_answers =  {};
+
 const problem = getquestion();
 problem.forEach((obj, index)=>{  // obj = question: "What does DBMS stand for?", options: ["Database Management System", "Data Backup Management System", "Database Monitoring System", "Data Management Service"], answer: "Database Management System" },
     // select the form and insert all elements in it
 
     const div = document.createElement('div');
     div.className = 'question';
+
+    
+    org_answers[`q${index + 1}`] = obj.answer;
 
     const paragraph = document.createElement('p');
     paragraph.textContent = `${index + 1}. ${obj.question}`;
@@ -163,4 +169,26 @@ button.textContent = "Submit";
 
 form.appendChild(button);
 
+const paragraph2 = document.createElement('p');
+paragraph2.id = "out";
+
+form.appendChild(paragraph2);
+
+// check the answers and tell the score 
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    const data = new FormData(form);
+
+    let result = 0;
+    for(let[key, value] of data.entries())
+    {
+        if(value === org_answers[key])
+            result++;
+    }
+
+    const out = document.getElementById('out');
+    out.innerText = `${result} out of 5 is correct`;
+
+    form.reset();
+})
 
